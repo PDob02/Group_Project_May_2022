@@ -4,3 +4,6 @@ Patrick is the square []
 Kaiya is the circle
 David is the triangle
 Kyle is the X 
+
+
+Communication protocol: 
