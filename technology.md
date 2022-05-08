@@ -6,7 +6,7 @@ To clean and analyze the data Pandas will be used.  Python will be used for furt
 
 ## Database Storage
 
-Postgres database is what will be used to store the data. As the data is continues to be anaylyzed the group will determine which vizulations will be most effective (i.e. graphs, charts) for displaying the data.
+Postgres database is what will be used to store the data. As the data is continues to be analyzed, the group will determine which vizulations will be most effective (i.e. graphs, charts) for displaying the data.
 
 ## Machine Learning
 
