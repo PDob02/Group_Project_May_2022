@@ -21,3 +21,11 @@ The data was also meaningful enough to allow us to come up with practical and ev
 ### Source of our data
 
 The dataset was found on [Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies).
+
+### Questions we hoped to answer with the data
+
+Based on the information provided in the data, the group would like to determine the sucess of a movie based on the following:
+* Release month
+* Movie Director
+* Main star
+* Genre
