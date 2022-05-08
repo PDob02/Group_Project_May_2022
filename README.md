@@ -4,13 +4,22 @@ For our final project we chose the topic of Movie success for new in-theater rel
 
 =================
 
-For Segment One:
-- Patrick is the square
-- Kaiya is the circle
-- David is the triangle
-- Kyle is the X 
+Roles For Segment One:
+- Patrick is the Square 
+- Kaiya is the Circle
+- David is the Triangle
+- Kylie is the X
 
 We were each responsible for an branch during the first segment:
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/pdobry/segment_1/Images/Git_Branches_Segment_1.png)
 
 ==================
+
+**Communication protocols:**
+
+We have met for both of the classes & office hours this week as well as on Tuesday, Friday, & Sunday. After our TAs approved the project on Saturday we pushed the final commits on Sunday night. We have been using Slack, Zoom, & other tools to communicate. 
+
+**Machine Learning Model:**
+
+
+**Database:** We have chosen a PostgreSQL database for this project that will set locally on each of our machines. This will be important to recreate identically for each of us. We will do this by saving & outputting the commands in PostgreSQL to our shared repository. 
