@@ -7,3 +7,11 @@ Kyle is the X
 
 
 Communication protocol: 
+
+## Presentation
+
+# Topic
+Can the sucess of a movie be predicted based on certain factors?
+
+
+
