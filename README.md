@@ -22,8 +22,10 @@ We were each responsible for an branch during the first segment:
 
 We have met for both of the classes & office hours this week as well as on Tuesday, Friday, & Sunday. After our TAs approved the project on Saturday we pushed the final commits on Sunday night. We have been using Slack, Zoom, & other tools to communicate. 
 
+
 **Machine Learning Model:**
 SciKitLearn  will be used using a multi-linear regression model to train and test the data. We will also use a Lasso & Ridge regression model. Our output labels will be predicted gross revenue. We will also be using a fourth Linear Regression Model that's run through statsmodels instead of SciKitLearn. It reproduces the first Linear Regression model, but also provides a summary statistics table.
+
 
 **Database:** We have chosen a PostgreSQL database for this project that will set locally on each of our machines. This will be important to recreate identically for each of us. We will do this by saving & outputting the commands in PostgreSQL to our shared repository. 
 
