@@ -5,7 +5,7 @@
 Each year over a billion movie tickets are sold resulting in box office revenues of over $11 billion dollars (Source #1). Since it is not always guaranteed that the movie consumers spend their money on is of good quality we decided to produce a movie machine that determines expected gross revenue. This will focus on new in-theater releases & help studios find trends that can help monetize & maximize their releases. Our model will be able to input different factors including release month, budget, production company, & star power to predict a movies success with revenue. Our datasource will come from Kaggle and cover movies since 1980, including the recent pandemic release trends. The type of regression model we will consider include:Linear Regression, Lasso & Ridge Regression, Muli-Linear regression & a statsmodel Linear Regression. We will also have a front end website where users can fill out details regarding a pending release and the machine learning model should print things like expected revenue & other relevant metrics.
 
 =================
-View an In-Depth Presentation of our Project on Google Slides [Here](https://docs.google.com/presentation/d/19gyoO1Xixo4S4uNQXGSk6etrtWgv2QRmYCXpXCZC0VE/edit#slide=id.p)
+## View an In-Depth Presentation of our Project on Google Slides [Here](https://docs.google.com/presentation/d/19gyoO1Xixo4S4uNQXGSk6etrtWgv2QRmYCXpXCZC0VE/edit#slide=id.p)
 =======
 Roles For Segment One:
 - Patrick is the Square 
