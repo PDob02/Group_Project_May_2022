@@ -44,5 +44,5 @@ The data we were able to find also needed minimal cleaning to analyze and come u
 1. https://www.the-numbers.com/market/
 
 ### Source of our data
+[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content.
 
-The data was originally web scraped from the IMDb website.  IMDb is website that a database online that contains information related to movies, tv series, video games, as well as streaming content online. The dataset was found on [Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). 
