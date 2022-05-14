@@ -38,22 +38,22 @@ SciKitLearn  will be used using a multi-linear regression model to train and tes
 **Database:** We have chosen a PostgreSQL database for this project that will set locally on each of our machines. This will be important to recreate identically for each of us. We will do this by saving & outputting the commands in PostgreSQL to our shared repository. 
 
 ### Why we selected the topic.
-The group chose this topic for a few different reasons.  The first reason was that there was a pretty meaningful dataset. We were able to explore and discuss different possible options for our project.
-The data we were able to find also needed minimal cleaning to analyze and come up with an agreeable topic to discuss. The data was also meaningful enough to allow us to come up with practical and everyday uses that anyone could find useful.
+The group chose this topic for a few different reasons.  The first reason was that there was a pretty meaningful & robust dataset. We were able to explore and discuss different possible options for our project. The data we were able to find also needed minimal cleaning to analyze and come up with an agreeable topic to discuss. The data was also meaningful enough to allow us to come up with practical and everyday uses that anyone could find useful. Movies are also a fun project and predicting the gross revenue of these movies will be something that we can enjoy during the summer blockbuster season. 
 
 ## References
 1. https://www.the-numbers.com/market/
 
 ### Source of our data
-[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content.
+[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
 
 Content
 The presentation outlines the project,
 including the following:
-✓ Selected topic 
-✓ Reason why they selected their topic 
-✓ Description of their source of data ✓ Questions they hope to answer with
-the data 
+✓ Selected topic - Data analysis for Movies
+✓ Reason why they selected their topic -
+✓ Description of their source of data- Kaggle done
+✓ Questions they hope to answer with
+the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc.  
 ✓ Description of the data exploration
 phase of the project 
 ✓ Description of the analysis phase of
@@ -62,11 +62,16 @@ Slides Presentations are drafted in Google Slides.
 
 Main Branch All code in the main branch is productionready.
 The main branch should include: ✓ All code necessary to perform
-exploratory analysis 
+exploratory analysis - Code has been loaded into the PostgreSQL database.
 ✓ Some code necessary to complete the
 machine learning portion of the project
-README.md README.md must include: ✓ Description of the communication
-protocols 
+README.md 
+
+README.md must include: 
+
+✓ Description of the communication
+protocols - DONE
+
 ✓ Outline of the project (this may include
 images, but should be easy to follow and
 digest)
@@ -76,7 +81,9 @@ should also be in your README.md as
 part of your outline, unless otherwise
 noted.
 Individual Branches 
+
 ✓ At least one branch for each team member 
+
 ✓ Each team member has at least four
 commits for the duration of the second
 segment (eight total commits per person)
@@ -90,7 +97,8 @@ engineering and preliminary feature
 selection, including their decision-making
 process 
 ✓ Description of how data was split into
-training and testing sets 
+training and testing sets - We used the standard train test split code for this part of the deliverable. 
+
 ✓ Explanation of model choice, including
 limitations and benefits
 
