@@ -27,6 +27,7 @@ We have met for both of the classes & office hours this week as well as on Tuesd
 
 Based on the information provided in the data, the group would like to determine the sucess of a movie based on the following:
 * Release month
+* Day of the week
 * Movie Director
 * Main star
 * Genre
