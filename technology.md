@@ -15,3 +15,12 @@ SciKitLearn  will be used using a multi-linear regression model to train and tes
 ## Dashboard
 
 For the dashboard portion of the project we will be using Dash, which provides a Python interface for interactive web-based components.  
+
+## Technoligies installed in ML Environment
+Pip install dash
+Pip install dash-bootstrap-components
+Pip install splinter
+Pip install selenium
+Pip install webdriver_manager
+Pip install cpi
+Pip install SQLAlchemy 
