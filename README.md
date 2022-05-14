@@ -124,5 +124,5 @@ A blueprint for the dashboard is created
 and includes all of the following:
 ✓ Storyboard on Google Slide(s) 
 ✓ Description of the tool(s) that will be
-used to create final dashboard 
-✓ Description of interactive element(s) 
+used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
+✓ Description of interactive element(s) - Some of the interactive elements that we will have on our page include drop down menus, a graphical search bar, multiple pages, & the ability to hover over different parts of the dataset. 
