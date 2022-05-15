@@ -57,7 +57,7 @@ the data - We hope to predict gross revenue as either an absolute number or a ra
 ✓ Description of the data exploration
 phase of the project - For the data exploration phase we took a dataset from Kaggle with movies that dated back to the year 1980. Additionally, we scraped actor's birthdays from wikipedia to try to find if there is a correlation between actor age & success. We scrubbed the data for missing values and loaded that data into our PostgreSQL database. 
 ✓ Description of the analysis phase of
-the project
+the project- For the analysis we will be looking at a few different outcomes including success of a movie based on box office ticket sales. The factors that we will input into the data include month of release, day of the week for premier, lead actor, lead actor's age, and other inputs that we find relevant through our continued discovery.  
 Slides Presentations are drafted in Google Slides. 
 
 Main Branch All code in the main branch is productionready.
@@ -91,7 +91,7 @@ segment (eight total commits per person) Yes
 Team members submit the code for their machine learning model, as well as the
 following:
 ✓ Description of preliminary data
-preprocessing- For the dat preprocessing we did the following...
+preprocessing- For the data preprocessing we did the following...
 ✓ Description of preliminary feature
 engineering and preliminary feature
 selection, including their decision-making
