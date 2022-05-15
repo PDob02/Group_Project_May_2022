@@ -82,16 +82,16 @@ part of your outline, unless otherwise
 noted.
 Individual Branches 
 
-✓ At least one branch for each team member 
+✓ At least one branch for each team member - Satisfied
 
 ✓ Each team member has at least four
 commits for the duration of the second
-segment (eight total commits per person)
+segment (eight total commits per person) Yes
 
 Team members submit the code for their machine learning model, as well as the
 following:
 ✓ Description of preliminary data
-preprocessing 
+preprocessing- For the dat preprocessing we did the following...
 ✓ Description of preliminary feature
 engineering and preliminary feature
 selection, including their decision-making
@@ -100,7 +100,7 @@ process
 training and testing sets - We used the standard train test split code for this part of the deliverable. 
 
 ✓ Explanation of model choice, including
-limitations and benefits
+limitations and benefits- The limitation of the linear regression are:
 
 Team members present a fully integrated
 database.
@@ -109,14 +109,14 @@ during the project
 ✓ Database interfaces with the project in
 some format (e.g., scraping updates the
 database, or database connects to the
-model) 
+model) - We have scraped wikipedia primarily for actor/actresses' birthdays as we think that information will be statistically significant in our analysis 
 ✓ Includes at least two tables (or
 collections, if using MongoDB) 
 ✓ Includes at least one join using the
 database language (not including any
-joins in Pandas) 
-✓ Includes at least one connection string
-(using SQLAlchemy or PyMongo)
+joins in Pandas) The database language we are using is SQL via PostgreSQL
+✓ Includes at least one connection string 
+(using SQLAlchemy or PyMongo) The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We have attached an ERD snapshot below:
 Note: If you use a SQL database, you
 must provide your ERD with relationships
 
