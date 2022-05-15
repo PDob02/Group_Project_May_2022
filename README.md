@@ -16,7 +16,6 @@ Roles For Segment One:
 We were each responsible for an branch during the first segment:
 
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/pdobry/segment_1/Images/Git_Branches_Segment_1.png)
-
 ==================
 
 **Communication protocols:**
@@ -42,35 +41,42 @@ The group chose this topic for a few different reasons.  The first reason was th
 
 ## References
 1. https://www.the-numbers.com/market/
+2. https://sciencing.com/advantages-using-independent-group-ttest-8647277.html 
 
 ### Source of our data
 [Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
 
+
 Content
 The presentation outlines the project,
 including the following:
-✓ Selected topic - Data analysis for Movies
-✓ Reason why they selected their topic - Fun topic- we explained this in the first readme
-✓ Description of their source of data- Kaggle done
+<!-- ✓ Selected topic - Data analysis for Movies -->
+<!-- ✓ Reason why they selected their topic - Fun topic- we explained this in the first readme -->
+<!-- ✓ Description of their source of data- Kaggle done -->
 ✓ Questions they hope to answer with
-the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc. This will be a handy tool for upcoming summer blockbusters. It will also help us determine which movies overperformed & underperformed based on our model. 
+the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc. This will be a handy tool for upcoming summer blockbusters. It will also help us determine which movies overperformed & underperformed based on our model.
+
 ✓ Description of the data exploration
 phase of the project - For the data exploration phase we took a dataset from Kaggle with movies that dated back to the year 1980. Additionally, we scraped actor's birthdays from wikipedia to try to find if there is a correlation between actor age & success. We scrubbed the data for missing values and loaded that data into our PostgreSQL database. 
+
 ✓ Description of the analysis phase of
-the project- For the analysis we will be looking at a few different outcomes including success of a movie based on box office ticket sales. The factors that we will input into the data include month of release, day of the week for premier, lead actor, lead actor's age, and other inputs that we find relevant through our continued discovery.  
+the project- 
+For the analysis we will be looking at a few different outcomes including success of a movie based on box office ticket sales. The factors that we will input into the data include month of release, day of the week for premier, lead actor, lead actor's age, and other inputs that we find relevant through our continued discovery.  
+
 Slides Presentations are drafted in Google Slides. 
 
 Main Branch All code in the main branch is productionready.
 The main branch should include: ✓ All code necessary to perform
 exploratory analysis - Code has been loaded into the PostgreSQL database.
+
 ✓ Some code necessary to complete the
 machine learning portion of the project
 README.md 
 
 README.md must include: 
 
-✓ Description of the communication
-protocols - DONE
+<!-- ✓ Description of the communication
+protocols - DONE -->
 
 ✓ Outline of the project (this may include
 images, but should be easy to follow and
@@ -82,11 +88,11 @@ part of your outline, unless otherwise
 noted.
 Individual Branches 
 
-✓ At least one branch for each team member - Satisfied
-
+<!-- ✓ At least one branch for each team member - Satisfied -->
+<!-- 
 ✓ Each team member has at least four
 commits for the duration of the second
-segment (eight total commits per person) Yes
+segment (eight total commits per person) Yes -->
 
 Team members submit the code for their machine learning model, as well as the
 following:
@@ -100,12 +106,12 @@ process
 training and testing sets - We used the standard train test split code for this part of the deliverable. 
 
 ✓ Explanation of model choice, including
-limitations and benefits- The limitation of the linear regression are:
-
+limitations and benefits- The limitation of the linear regression are that is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
+<!-- 
 Team members present a fully integrated
 database.
 ✓ Database stores static data for use
-during the project 
+during the project - Satisfied with Postgres -->
 ✓ Database interfaces with the project in
 some format (e.g., scraping updates the
 database, or database connects to the
