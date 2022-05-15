@@ -96,15 +96,17 @@ Team members submit the code for their machine learning model, as well as the
 following:
 ✓ Description of preliminary data
 preprocessing- For the data preprocessing we did the following...
+
 ✓ Description of preliminary feature
 engineering and preliminary feature
 selection, including their decision-making
 process 
+
 ✓ Description of how data was split into
 training and testing sets - We used the standard train test split code for this part of the deliverable. 
 
-✓ Explanation of model choice, including
-limitations and benefits- The limitation of the linear regression are that is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
+✓ Explanation of model choice, including limitations and benefits- 
+The limitation of the linear regression are that is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
 <!-- 
 Team members present a fully integrated
 database.
@@ -114,13 +116,16 @@ during the project - Satisfied with Postgres -->
 some format (e.g., scraping updates the
 database, or database connects to the
 model) - We have scraped wikipedia primarily for actor/actresses' birthdays as we think that information will be statistically significant in our analysis 
+
 ✓ Includes at least two tables (or
 collections, if using MongoDB) 
+
 ✓ Includes at least one join using the
 database language (not including any
 joins in Pandas) The database language we are using is SQL via PostgreSQL
+
 ✓ Includes at least one connection string 
-(using SQLAlchemy or PyMongo) The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We have attached an ERD snapshot below:
+(using SQLAlchemy or PyMongo) The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We did not find that it was necessary to use the MongoDB product. We have attached an ERD snapshot below:
 
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/main/Images/moviesERD.png)
 
@@ -130,6 +135,8 @@ must provide your ERD with relationships
 A blueprint for the dashboard is created
 and includes all of the following:
 ✓ Storyboard on Google Slide(s) - Done?
+
 ✓ Description of the tool(s) that will be
 used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
+
 ✓ Description of interactive element(s) - Some of the interactive elements that we will have on our page include drop down menus, a graphical search bar, multiple pages, & the ability to hover over different parts of the dataset. 
