@@ -117,12 +117,15 @@ database language (not including any
 joins in Pandas) The database language we are using is SQL via PostgreSQL
 ✓ Includes at least one connection string 
 (using SQLAlchemy or PyMongo) The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We have attached an ERD snapshot below:
+
+![](https://github.com/PDob02/Group_Project_May_2022/blob/main/Images/moviesERD.png)
+
 Note: If you use a SQL database, you
 must provide your ERD with relationships
 
 A blueprint for the dashboard is created
 and includes all of the following:
-✓ Storyboard on Google Slide(s) 
+✓ Storyboard on Google Slide(s) - Done?
 ✓ Description of the tool(s) that will be
 used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
 ✓ Description of interactive element(s) - Some of the interactive elements that we will have on our page include drop down menus, a graphical search bar, multiple pages, & the ability to hover over different parts of the dataset. 
