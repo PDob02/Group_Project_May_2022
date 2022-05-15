@@ -7,15 +7,13 @@ Each year over a billion movie tickets are sold resulting in box office revenues
 =================
 ## View an In-Depth Presentation of our Project on Google Slides [Here](https://docs.google.com/presentation/d/19gyoO1Xixo4S4uNQXGSk6etrtWgv2QRmYCXpXCZC0VE/edit#slide=id.p)
 =======
-Roles For Segment One:
+Roles For Group Project:
 - Patrick is the Square 
 - Kaiya is the Circle
 - David is the Triangle
 - Kylie is the X
-
-We were each responsible for an branch during the first segment:
-
-![](https://github.com/PDob02/Group_Project_May_2022/blob/pdobry/segment_1/Images/Git_Branches_Segment_1.png)
+<!-- We were each responsible for an branch during the first segment:
+![](https://github.com/PDob02/Group_Project_May_2022/blob/pdobry/segment_1/Images/Git_Branches_Segment_1.png) -->
 ==================
 
 **Communication protocols:**
