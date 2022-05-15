@@ -48,6 +48,7 @@ The data we were able to find also needed minimal cleaning to analyze and come u
 This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content.
 
 * [Kaggle - Movies](https://www.kaggle.com/datasets/danielgrijalvas/movies).
+
 Wikipedia is an online encyclopedia allowing free access to everyone.  Information is provided by volunteers and contributors through open collaboration.  The two websites below were used to gather information found on Wikipedia.
 
 * [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
