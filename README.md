@@ -50,12 +50,12 @@ Content
 The presentation outlines the project,
 including the following:
 ✓ Selected topic - Data analysis for Movies
-✓ Reason why they selected their topic -
+✓ Reason why they selected their topic - Fun topic- we explained this in the first readme
 ✓ Description of their source of data- Kaggle done
 ✓ Questions they hope to answer with
-the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc.  
+the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc. This will be a handy tool for upcoming summer blockbusters. It will also help us determine which movies overperformed & underperformed based on our model. 
 ✓ Description of the data exploration
-phase of the project 
+phase of the project - For the data exploration phase we took a dataset from Kaggle with movies that dated back to the year 1980. Additionally, we scraped actor's birthdays from wikipedia to try to find if there is a correlation between actor age & success. We scrubbed the data for missing values and loaded that data into our PostgreSQL database. 
 ✓ Description of the analysis phase of
 the project
 Slides Presentations are drafted in Google Slides. 
