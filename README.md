@@ -108,13 +108,12 @@ model) - We have scraped wikipedia primarily for actor/actresses' birthdays as w
 
 <!-- ✓ Includes at least two tables (or
 collections, if using MongoDB)  -->
-
+<!-- 
 ✓ Includes at least one join using the
 database language (not including any
-joins in Pandas) The database language we are using is SQL via PostgreSQL
+joins in Pandas) The database language we are using is SQL via PostgreSQL -->
 
-✓ Includes at least one connection string 
-(using SQLAlchemy or PyMongo) The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We did not find that it was necessary to use the MongoDB product. We have attached an ERD snapshot below:
+The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We did not find that it was necessary to use the MongoDB product. We have attached an ERD snapshot below:
 
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/main/Images/moviesERD.png)
 
