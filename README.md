@@ -123,9 +123,9 @@ The connection string we are using is SQLAlchemy since our data is very tabular 
 Note: If you use a SQL database, you
 must provide your ERD with relationships
 
-A blueprint for the dashboard is created
+<!-- A blueprint for the dashboard is created
 and includes all of the following:
-✓ Storyboard on Google Slide(s) - Done?
+✓ Storyboard on Google Slide(s) - Done? -->
 
 ✓ Description of the tool(s) that will be
 used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
