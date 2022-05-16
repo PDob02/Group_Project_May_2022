@@ -82,7 +82,9 @@ following:
 ✓ Description of preliminary data
 preprocessing- For the data preprocessing we did the following:
 o   The columns with missing values were removed using the .dropna() method, reducing the number of rows to 5,421
+
 o   The released column contained both a date and Country. We wanted to isolate the month of the movie’s release. To do this, we used the .str.split() method to split the data in the column at the “(“ to create a new column with only the date. Then using Pandas .to_datetime() and the dt.month methods, we isolated only the month of the movie’s release.
+
 o   The dataset contains data for movies released from 1980 – 2020. To account for inflation, we used a lambda function to apply the cpi library to adjust the budget and gross revenue dollar values.
 
 
