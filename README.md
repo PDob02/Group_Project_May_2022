@@ -137,4 +137,12 @@ used to create final dashboard - One of the primary tools to create our dashboar
 2. https://sciencing.com/advantages-using-independent-group-ttest-8647277.html 
 
 ### Source of our data
-[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
+This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content.
+
+* [Kaggle - Movies](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
+
+Wikipedia is an online encyclopedia allowing free access to everyone.  Information is provided by volunteers and contributors through open collaboration.  The two websites below were used to gather information found on Wikipedia.
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+* [Academay Award Nominations](https://en.wikipedia.org/wiki/List_of_actors_with_Academy_Award_nominations#List_of_actors)
+
