@@ -37,14 +37,7 @@ SciKitLearn  will be used using a multi-linear regression model to train and tes
 ### Why we selected the topic.
 The group chose this topic for a few different reasons.  The first reason was that there was a pretty meaningful & robust dataset. We were able to explore and discuss different possible options for our project. The data we were able to find also needed minimal cleaning to analyze and come up with an agreeable topic to discuss. The data was also meaningful enough to allow us to come up with practical and everyday uses that anyone could find useful. Movies are also a fun project and predicting the gross revenue of these movies will be something that we can enjoy during the summer blockbuster season. 
 
-## References
-1. https://www.the-numbers.com/market/
-2. https://sciencing.com/advantages-using-independent-group-ttest-8647277.html 
-
-### Source of our data
-[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
-
-
+### Outline Deliverable 2 ### 
 Content
 The presentation outlines the project,
 including the following:
@@ -61,17 +54,9 @@ phase of the project - For the data exploration phase we took a dataset from Kag
 the project- 
 For the analysis we will be looking at a few different outcomes including success of a movie based on box office ticket sales. The factors that we will input into the data include month of release, day of the week for premier, lead actor, lead actor's age, and other inputs that we find relevant through our continued discovery.  
 
-Slides Presentations are drafted in Google Slides. 
-
 Main Branch All code in the main branch is productionready.
 The main branch should include: ✓ All code necessary to perform
 exploratory analysis - Code has been loaded into the PostgreSQL database.
-
-✓ Some code necessary to complete the
-machine learning portion of the project
-README.md 
-
-README.md must include: 
 
 <!-- ✓ Description of the communication
 protocols - DONE -->
@@ -117,8 +102,8 @@ some format (e.g., scraping updates the
 database, or database connects to the
 model) - We have scraped wikipedia primarily for actor/actresses' birthdays as we think that information will be statistically significant in our analysis 
 
-✓ Includes at least two tables (or
-collections, if using MongoDB) 
+<!-- ✓ Includes at least two tables (or
+collections, if using MongoDB)  -->
 
 ✓ Includes at least one join using the
 database language (not including any
@@ -140,3 +125,10 @@ and includes all of the following:
 used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
 
 ✓ Description of interactive element(s) - Some of the interactive elements that we will have on our page include drop down menus, a graphical search bar, multiple pages, & the ability to hover over different parts of the dataset. 
+
+## References
+1. https://www.the-numbers.com/market/
+2. https://sciencing.com/advantages-using-independent-group-ttest-8647277.html 
+
+### Source of our data
+[Kaggle](https://www.kaggle.com/datasets/danielgrijalvas/movies). This dataset was originally web scraped from the IMDb website.  IMDb is an online database that contains information related to movies, tv series, video games, as well as streaming content. This particular dataset caught our eyes since it was robust and we could seemingly draw direct conclusions from linear regression & machine learning models.
