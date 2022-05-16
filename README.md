@@ -37,7 +37,6 @@ SciKitLearn  will be used using a multi-linear regression model to train and tes
 
 ### Why we selected the topic.
 The group chose this topic for a few different reasons.  The first reason was that there was a pretty meaningful & robust dataset. We were able to explore and discuss different possible options for our project. The data we were able to find also needed minimal cleaning to analyze and come up with an agreeable topic to discuss. The data was also meaningful enough to allow us to come up with practical and everyday uses that anyone could find useful. Movies are also a fun project and predicting the gross revenue of these movies will be something that we can enjoy during the summer blockbuster season. 
-=====================
 
 ### Outline Deliverable 2 ### 
 Content
