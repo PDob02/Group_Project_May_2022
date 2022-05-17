@@ -17,10 +17,6 @@ Roles For Group Project:
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/pdobry/segment_1/Images/Git_Branches_Segment_1.png) -->
 ==================
 
-**Communication protocols:**
-
-We have met for both of the classes & office hours this week as well as on Tuesday, Friday, & Sunday. After our TAs approved the project on Saturday we pushed the final commits on Sunday night. We have been using Slack, Zoom, & other tools to communicate. 
-
 ### Questions we hoped to answer with the data
 
 Based on the information provided in the data, the group would like to determine the sucess of a movie based on the following:
@@ -42,9 +38,7 @@ The group chose this topic for a few different reasons.  The first reason was th
 Content
 The presentation outlines the project,
 including the following:
-<!-- ✓ Selected topic - Data analysis for Movies -->
-<!-- ✓ Reason why they selected their topic - Fun topic- we explained this in the first readme -->
-<!-- ✓ Description of their source of data- Kaggle done -->
+
 ✓ Questions they hope to answer with
 the data - We hope to predict gross revenue as either an absolute number or a range based on different factors including leading actor/actress, release month, release month etc. This will be a handy tool for upcoming summer blockbusters. It will also help us determine which movies overperformed & underperformed based on our model.
 
@@ -59,9 +53,6 @@ Main Branch All code in the main branch is productionready.
 The main branch should include: ✓ All code necessary to perform
 exploratory analysis - Code has been loaded into the PostgreSQL database.
 
-<!-- ✓ Description of the communication
-protocols - DONE -->
-
 ✓ Outline of the project (this may include
 images, but should be easy to follow and
 digest)
@@ -71,12 +62,6 @@ should also be in your README.md as
 part of your outline, unless otherwise
 noted.
 Individual Branches 
-
-<!-- ✓ At least one branch for each team member - Satisfied -->
-<!-- 
-✓ Each team member has at least four
-commits for the duration of the second
-segment (eight total commits per person) Yes -->
 
 Team members submit the code for their machine learning model, as well as the
 following:
@@ -88,44 +73,19 @@ o   The released column contained both a date and Country. We wanted to isolate 
 
 o   The dataset contains data for movies released from 1980 – 2020. To account for inflation, we used a lambda function to apply the cpi library to adjust the budget and gross revenue dollar values.
 
-
-✓ Description of preliminary feature
-engineering and preliminary feature
-selection, including their decision-making
-process 
-
-✓ Description of how data was split into
-training and testing sets - We used the standard train test split code for this part of the deliverable. 
+We used the standard train test split code for this part of the deliverable. 
 
 ✓ Explanation of model choice, including limitations and benefits- 
 The limitation of the linear regression are that is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
-<!-- 
-Team members present a fully integrated
-database.
-✓ Database stores static data for use
-during the project - Satisfied with Postgres -->
+
 ✓ Database interfaces with the project in
 some format (e.g., scraping updates the
 database, or database connects to the
 model) - We have scraped wikipedia primarily for actor/actresses' birthdays as we think that information will be statistically significant in our analysis 
 
-<!-- ✓ Includes at least two tables (or
-collections, if using MongoDB)  -->
-<!-- 
-✓ Includes at least one join using the
-database language (not including any
-joins in Pandas) The database language we are using is SQL via PostgreSQL -->
-
 The connection string we are using is SQLAlchemy since our data is very tabular with only a few NaN values. We did not find that it was necessary to use the MongoDB product. We have attached an ERD snapshot below:
 
 ![](https://github.com/PDob02/Group_Project_May_2022/blob/main/Images/moviesERD.png)
-
-Note: If you use a SQL database, you
-must provide your ERD with relationships
-
-<!-- A blueprint for the dashboard is created
-and includes all of the following:
-✓ Storyboard on Google Slide(s) - Done? -->
 
 ✓ Description of the tool(s) that will be
 used to create final dashboard - One of the primary tools to create our dashboard include the DASH library in python. We also have a list of the technical installs that we are making in the technology.md file. 
@@ -144,5 +104,5 @@ This dataset was originally web scraped from the IMDb website.  IMDb is an onlin
 Wikipedia is an online encyclopedia allowing free access to everyone.  Information is provided by volunteers and contributors through open collaboration.  The two websites below were used to gather information found on Wikipedia.
 
 * [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
-* [Academay Award Nominations](https://en.wikipedia.org/wiki/List_of_actors_with_Academy_Award_nominations#List_of_actors)
+* [Academy Award Nominations](https://en.wikipedia.org/wiki/List_of_actors_with_Academy_Award_nominations#List_of_actors)
 
