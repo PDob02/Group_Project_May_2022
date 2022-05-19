@@ -55,6 +55,7 @@ layout = html.Div([
 @callback(
      [Output(component_id='bar-revenue-by-year', component_property='figure'),
      Output(component_id="scatter-matrix", component_property='figure')],
+     Output(component_id="my-output", component_property='figure')],
      [Input(component_id='slct_year', component_property='value')]
 )
 
@@ -84,8 +85,16 @@ def update_graph(option_slctd):
         title="Scatter Matrix for Movie Data"
         )
 
-    return fig, fig2
+    # https://plotly.com/python/heatmaps/
+    data=[[1, 25, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, 5, 20]]
+    fig3 = px.imshow(data,
+                    labels=dict(x="Day of Week", y="Time of Day", color="Gross Revenue"),
+                    x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'],
+                    y=['Morning', 'Afternoon', 'Evening']
+                )
+    fig3.update_xaxes(side="top")
 
+    return fig, fig2, fig3
 
 # if __name__ == '__main__':
 #     app.run_server(debug=True)
