@@ -2,7 +2,7 @@ from dash import Dash, dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
 from app import app
-from pages import page1, page2, home
+from pages import page1cpy, page2, home
 
 dropdown = dbc.DropdownMenu(
     children=[
@@ -68,7 +68,7 @@ app.layout = html.Div([
 
 def display_page(pathname):
     if pathname== "/viz":
-        return page1.layout
+        return page1cpy.layout
     elif pathname == "/model":
         return page2.layout
     else:
