@@ -43,6 +43,8 @@ layout = html.Div([
 
     dcc.Graph(id="scatter-matrix", figure={}),
 
+    dcc.Graph(id="my-output", figure={}),
+
     ]),
 
 
