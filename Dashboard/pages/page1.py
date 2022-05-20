@@ -34,14 +34,29 @@ layout = html.Div([
     max = 2022,
     placeholder = "Enter a Year"
     ),
+
+    dcc.Dropdown(
+        options=[
+            {'label': '1980', 'value': '1980'},
+            {'label': '1981', 'value': '1981'},
+            {'label': '1982', 'value': '1982'},
+            {'label': '1983', 'value': '1983'},
+            {'label': '1984', 'value': '1984'},
+            {'label': '1985', 'value': '1985'},
+            {'label': '1986', 'value': '1986'},
+            {'label': '1987', 'value': '1987'},
+
+        ],
+        multi = False
+    )
    
-    html.Br(),
+    # html.Br(),
 
-    dcc.Graph(id="bar-revenue-by-year", figure ={}),
+    # dcc.Graph(id="bar-revenue-by-year", figure ={}),
 
-    html.Br(),
+    # html.Br(),
 
-    dcc.Graph(id="scatter-matrix", figure={}),
+    # dcc.Graph(id="scatter-matrix", figure={}),
 
     ]),
 
