@@ -2,25 +2,14 @@ import pandas as pd
 import plotly.express as px
 from dash import dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
+from config import db_password
+from sqlalchemy import text
 
-
-movies_df = pd.read_csv("movies.csv")
-
-markdown_text = '''
-### Page 1 - Visualizations
-
-This page will contain various visualizations that will show trends in movies data.
-For example, the highest grossing movies by year. 
-
-Sample graphs are below:
-
-
-
-'''
+# movies_df = pd.read_csv("movies.csv")
+t = text("SELECT * FROM movies;")
+movies_df = pd.read_sql(t, con=f"postgresql://postgres:{db_password}@127.0.0.1:5432/group_project")
 
 layout = html.Div([
-
-    dcc.Markdown(children=markdown_text),
 
     dbc.Container([
         dbc.Row([
@@ -132,7 +121,3 @@ def update_graph(option_slctd):
         )
 
     return fig, fig2
-
-
-# if __name__ == '__main__':
-#     app.run_server(debug=True)
