@@ -4,7 +4,7 @@ from dash import dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
 
 
-movies_df = pd.read_csv("movies.csv")
+movies_df = pd.read_csv("Resources/movies.csv")
 
 markdown_text = '''
 ### Page 1 - Visualizations
