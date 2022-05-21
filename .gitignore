@@ -26,7 +26,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
+#heatmap
+heatmap.py
 
 # Config file
 config.py
