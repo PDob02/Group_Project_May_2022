@@ -6,6 +6,7 @@ import dash_bootstrap_components as dbc
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 import joblib
+from encode import encode
 
 
 markdown_text = '''
@@ -57,18 +58,18 @@ layout = html.Div([
         dbc.Col(html.Label(children='Month of Release')),
         dbc.Col(dcc.Dropdown(id='release-month',
                 options = {
-                    'January': 'January',
-                    'February': 'February',
-                    'March': 'March',
-                    'April': 'April',
-                    'May': 'May',
-                    'June': 'June',
-                    'July': 'July',
-                    'August': 'August',
-                    'September': 'September',
-                    'October': 'October',
-                    'November': 'November',
-                    'December': 'December'},
+                    '1': 'January',
+                    '2': 'February',
+                    '3': 'March',
+                    '4': 'April',
+                    '5': 'May',
+                    '6': 'June',
+                    '7': 'July',
+                    '8': 'August',
+                    '9': 'September',
+                    '10': 'October',
+                    '11': 'November',
+                    '12': 'December'},
                 placeholder='Select the month of release'))
 
     ]),
@@ -151,7 +152,7 @@ layout = html.Div([
                 'Other':'Other',
                 'Universal Pictures':'Universal Pictures',
                 'Columbia Pictures':'Columbia Pictures',
-                'Warner Bros':'Warner Bros',
+                'Warner Bros.':'Warner Bros.',
                 'Paramount Pictures':'Paramount Pictures',
                 'Twentieth Century Fox':'Twentieth Century Fox',
                 'New Line Cinema':'New Line Cinema',
@@ -225,12 +226,12 @@ layout = html.Div([
     ]),
     html.Br(),
     dbc.Row([
-        dbc.Col(html.Label(children='Select the Budget Amount')),
+        dbc.Col(html.Label(children='Select the Budget Amount (USD$)')),
         dbc.Col(dcc.Slider(id='budget', min=0, max=50000000, value=0)),
     ]),
     html.Br(),                
     dbc.Row([
-        dbc.Col(html.Label(children='Runtime')),
+        dbc.Col(html.Label(children='Runtime (Minutes)')),
         dbc.Col(dcc.Slider(id='runtime', min=0, max=200, value=0)),
     ]),
     html.Br(),
@@ -244,7 +245,6 @@ layout = html.Div([
 
 
 @callback(Output(component_id='prediction-output', component_property='children'),
-                Input(component_id='submit-val', component_property='n_clicks'),
                 State(component_id='rating', component_property='value'),
                 State(component_id='genre', component_property='value',),
                 State(component_id='release-month', component_property='value',),
@@ -258,19 +258,30 @@ layout = html.Div([
                 State(component_id='age', component_property='value',),
                 State(component_id='budget', component_property='value',),
                 State(component_id='runtime', component_property='value',),
+                Input(component_id='submit-val', component_property='n_clicks'),
 
                 )
 
-def update_result(n_clicks, rating, genre, release_month, release_dow, director,
-                    writer, company, actor, nominations, awards, age, budget, runtime):
+def update_result( rating, genre, release_month, release_dow, director,
+                    writer, company, actor, nominations, awards, age, budget, runtime, n_clicks):
 
+    prediction = encode(rating, genre, release_month, release_dow, director, writer, company, actor, nominations, awards, age, budget, runtime)
 
-    print(rating, genre, budget)
-    # x = np.array([[float(rating), float(genre), float(budget)]])
-    jlib_model = joblib.load('Ridge_model.joblib')
-    jlib_model.predict(x)
+    prediction = int(prediction)
     
+    return f"The expected gross revenue is: ${prediction:,.2f}"
+    
+    
+    
+    
+    
+    
+    
+    
+    # return f"The expected gross revenue is: {prediction}"
 
-    return f"The expected gross revenue is: {prediction}"
-
-   
+       # print(rating, genre, budget)
+    # # x = np.array([[float(rating), float(genre), float(budget)]])
+    # jlib_model = joblib.load('Ridge_model.joblib')
+    # jlib_model.predict(x)
+    
