@@ -72,7 +72,7 @@ part of your outline, unless otherwise
 noted.
 Individual Branches 
 
-<!-- ✓ At least one branch for each team member - Satisfied -->
+<!-- ✓ At least one branch for each team member with 4 commits each - Satisfied -->
 <!-- 
 ✓ Each team member has at least four
 commits for the duration of the second
