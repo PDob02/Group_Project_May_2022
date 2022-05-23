@@ -105,7 +105,7 @@ def update_graph(option_slctd):
     )
 
     fig2 = px.scatter_matrix(
-        result_data,
+        movies_copy,
         dimensions=["runtime", "budget", "gross"],
         color="name",
         title="Scatter Matrix for Movie Data",
