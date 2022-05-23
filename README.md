@@ -6,7 +6,6 @@ Each year over a billion movie tickets are sold resulting in box office revenues
 
 We chose this topic for a few different reasons. The first reason was that there was a pretty meaningful and robust dataset. We were able to explore and discuss different possible options for our project. The data we were able to find required minimal cleaning. The data was also meaningful enough to allow us to come up with practical and everyday uses that anyone could find either useful or interesting. Movies are also a fun project and predicting the gross revenue of these movies will be something that we can enjoy during the summer blockbuster season. 
 
-=================
 ## View an In-Depth Presentation of our Project on Google Slides [Here](https://docs.google.com/presentation/d/19gyoO1Xixo4S4uNQXGSk6etrtWgv2QRmYCXpXCZC0VE/edit#slide=id.p)
 
 # Project Outline
@@ -47,7 +46,6 @@ After analyzing our data, we determined that the best features to include in our
 Data was split into training and testing data using SciKit Learn’s train_test_split() function, where the features of the model were input as the X value and the square root of the target value (adjusted gross revenue) was input as the y value. We used the square root of target value to account for the data’s strong positive skew. After the data was split, both the training and testing feature values were scaled using SciKit Learn’s RobustScaler() to account for outliers noticed during data exploration.
 We chose to use a linear regression model because the target value we are trying to predict is a continuous value. The limitations of the linear regression are that it is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
 
-=======
 
 ## Dashboard
 
