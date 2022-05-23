@@ -5,26 +5,8 @@ import dash_bootstrap_components as dbc
 from config import db_password
 from sqlalchemy import text
 
-<<<<<<< HEAD
-
-movies_df = pd.read_csv("Resources/movies.csv")
-
-markdown_text = '''
-### Page 1 - Visualizations
-
-This page will contain various visualizations that will show trends in movies data.
-For example, the highest grossing movies by year. 
-
-Sample graphs are below:
-
-
-
-'''
-=======
-# movies_df = pd.read_csv("movies.csv")
 t = text("SELECT * FROM movies;")
 movies_df = pd.read_sql(t, con=f"postgresql://postgres:{db_password}@127.0.0.1:5432/group_project")
->>>>>>> 4c7e225795182c18edf36e9dbbe3cdf9c22645d9
 
 layout = html.Div([
 
@@ -33,13 +15,6 @@ layout = html.Div([
             dbc.Col(html.H1(children='Visualizations'), className="mb-2")
         ]),
 
-    # dcc.Input(
-    # id='slct_year',
-    # type='number',
-    # min = 1800,
-    # max = 2022,
-    # placeholder = "Enter a Year"
-    # ),
     dcc.Dropdown(
         id='slct_year',
         options=[
@@ -129,12 +104,13 @@ def update_graph(option_slctd):
         
     )
 
-
     fig2 = px.scatter_matrix(
-        movies_copy,
-        dimensions=["rating", "genre", "score", "budget", "gross"],
+        result_data,
+        dimensions=["runtime", "budget", "gross"],
         color="name",
-        title="Scatter Matrix for Movie Data"
+        title="Scatter Matrix for Movie Data",
+        width= 1200,
+        height= 1000
         )
 
     return fig, fig2
