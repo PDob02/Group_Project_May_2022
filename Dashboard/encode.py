@@ -2,7 +2,7 @@
 from joblib import load
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, RobustScaler
 
 # Create a Function to encode Dashboard inputs
 
@@ -20,7 +20,7 @@ def encode(rating, genre, release_month, release_dow, director, writer, company,
                                     "weekday": release_dow,
                                     "nominations": nominations,
                                     "awards_won": awards,
-                                    "star_age": age*365}, index=[0])
+                                    "star_age": age}, index=[0])
     movie_cat = cleaned_movies.dtypes[cleaned_movies.dtypes == "object"].index.tolist()
    
    
@@ -31,15 +31,14 @@ def encode(rating, genre, release_month, release_dow, director, writer, company,
  ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime',
         'Drama', 'Horror', 'Other'],
  ['Barry Levinson', 'Brian De Palma', 'Clint Eastwood', 'Directors',
-        'Garry Marshall', 'Ivan Reitman', 'Joel Schumacher',
-        'John Carpenter', 'Martin Scorsese', 'Oliver Stone', 'Other',
-        'Renny Harlin', 'Ridley Scott', 'Rob Reiner', 'Robert Zemeckis',
-        'Ron Howard', 'Spike Lee', 'Steven Soderbergh', 'Steven Spielberg',
-        'Tim Burton', 'Tony Scott', 'Walter Hill', 'Wes Craven',
-        'Woody Allen'],
+        'Garry Marshall', 'Joel Schumacher', 'Martin Scorsese',
+        'Oliver Stone', 'Other', 'Renny Harlin', 'Ridley Scott',
+        'Rob Reiner', 'Robert Zemeckis', 'Ron Howard', 'Spike Lee',
+        'Steven Soderbergh', 'Steven Spielberg', 'Tim Burton',
+        'Tony Scott', 'Walter Hill', 'Wes Craven', 'Woody Allen'],
  ['Brian Helgeland', 'David Mamet', 'Ehren Kruger', 'Joel Coen',
-        'John Carpenter', 'John Hughes', 'Kevin Smith', 'Leigh Whannell',
-        'Luc Besson', 'M. Night Shyamalan', 'Michael Crichton', 'Other',
+        'John Hughes', 'Kevin Smith', 'Leigh Whannell', 'Luc Besson',
+        'M. Night Shyamalan', 'Michael Crichton', 'Other',
         'Quentin Tarantino', 'Robert Rodriguez', 'Stephen King',
         'Wes Craven', 'William Shakespeare', 'Woody Allen'],
  ['Adam Sandler', 'Al Pacino', 'Arnold Schwarzenegger',
@@ -51,9 +50,9 @@ def encode(rating, genre, release_month, release_dow, director, writer, company,
         'Leonardo DiCaprio', 'Liam Neeson', 'Mark Wahlberg', 'Matt Damon',
         'Matthew McConaughey', 'Mel Gibson', 'Meryl Streep',
         'Nicolas Cage', 'Other', 'Richard Gere', 'Robert De Niro',
-        'Robert Downey Jr.', 'Robin Williams', 'Sandra Bullock',
-        'Steve Martin', 'Sylvester Stallone', 'Tom Cruise', 'Tom Hanks',
-        'Will Ferrell', 'Will Smith'],
+        'Robin Williams', 'Sandra Bullock', 'Steve Martin',
+        'Sylvester Stallone', 'Tom Cruise', 'Tom Hanks', 'Will Ferrell',
+        'Will Smith'],
 ['Columbia Pictures', 'Metro-Goldwyn-Mayer (MGM)',
         'New Line Cinema', 'Other', 'Paramount Pictures',
         'Touchstone Pictures', 'Twentieth Century Fox',
@@ -75,10 +74,24 @@ def encode(rating, genre, release_month, release_dow, director, writer, company,
     cleaned_movies = cleaned_movies.merge(encode_df, left_index=True, right_index=True)
     cleaned_movies = cleaned_movies.drop(movie_cat,1)
     
-
     # Convert dataframe to np.array
     array = cleaned_movies.to_numpy()
+    print(array)
+
+    # Load RobustScaler parameters and apply scaler to the dataframe
+    scaler = load("scaler.joblib")
+    
+
+    # Scale the data
+    array_scaled = scaler.transform(array)
+
+    
 
     model = load("Ridge_model.joblib")
+    print(model.coef_)
+    predict = model.predict(array_scaled)
 
-    return model.predict(array)
+    if predict > 0:
+       return predict**2
+    else:
+       return 0
