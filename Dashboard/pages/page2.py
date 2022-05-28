@@ -10,11 +10,10 @@ from encode import encode
 
 
 markdown_text = '''
-### Page 2 - Machine Learning Model
 
-This page will contain our machine learning model.
-The user will be able to enter information about a movie (release month, budget, genre, etc.)
-and our model will predict the movie's gross earnings. 
+Enter the required information for the upcoming film release or movie project. The machine learning model will predict its expected gross revenue.
+
+All fields are required in order to make the best prediction. 
 
 
 '''
@@ -22,6 +21,8 @@ and our model will predict the movie's gross earnings.
 
 layout = html.Div([
 
+    dcc.Markdown(markdown_text),
+    html.Br(),
 
     dbc.Row([html.H3(children='Predict Gross Revenue')]),
     html.Br(),
@@ -40,17 +41,15 @@ layout = html.Div([
         dbc.Col(html.Label(children='Genre')),
         dbc.Col(dcc.Dropdown(id='genre', 
                 options = {
-                    'Drama': 'Drama',
-                    'Adventure': 'Adventure',
                     'Action': 'Action',
-                    'Comedy': 'Comedy',
-                    'Horror': 'Horror',
-                    'Biography': 'Biography',
-                    'Crime': 'Crime',
-                    'Fantasy': 'Fantasy',
-                    'Sci-Fi': 'Sci-Fi',
+                    'Adventure': 'Adventure',
                     'Animation': 'Animation',
-                    'Thriller': 'Thriller'},
+                    'Biography': 'Biography',
+                    'Comedy': 'Comedy',
+                    'Crime': 'Crime',
+                    'Drama': 'Drama',
+                    'Other': 'Other'
+                    },
                 placeholder='Select the genre'))
     ]),
     html.Br(),
@@ -91,55 +90,51 @@ layout = html.Div([
     dbc.Row([
         dbc.Col(html.Label(children='Director')),
         dbc.Col(dcc.Dropdown(id='director',
-                options = {
-                    'Woody Allen': 'Woody Allen',
-                    'Clint Eastwood': 'Clint Eastwood',
-                    'Steven Spielberg': 'Steven Spielberg',
-                    'Ridley Scott': 'Ridley Scott',
-                    'Ron Howard': 'Ron Howard',
-                    'Joel Schumacher': 'Joel Schumacher',
-                    'Steven Soderbergh': 'Steven Soderbergh',
-                    'Tim Burton': 'Tim Burton',
-                    'Barry Levinson': 'Barry Levinson',
-                    'Spike Lee': 'Spike Lee',
-                    'Martin Scorsese': 'Martin Scorsese',
-                    'Oliver Stone': 'Oliver Stone',
-                    'Robert Zemeckis': 'Robert Zemeckis',
-                    'Wes Craven': 'Wes Craven',
-                    'Brian De Palma': 'Brian De Palma',
-                    'Directors': 'Directors',
-                    'Walter Hill': 'Walter Hill',
-                    'Garry Marshall': 'Garry Marshall',
-                    'John Carpenter': 'John Carpenter',
-                    'Rob Reiner': 'Rob Reiner',
-                    'Ivan Reitman': 'Ivan Reitman',
-                    'Tony Scott': 'Tony Scott',
-                    'Sam Raimi': 'Sam Raimi',
-                    'Renny Harlin': 'Renny Harlin',
-                    'Other': 'Other'},
-                placeholder='Select the director'))
+            options = {
+                'Woody Allen': 'Woody Allen',
+                'Tim Burton': 'Tim Burton',
+                'Wes Craven': 'Wes Craven',
+                'Brian De Palma': 'Brian De Palma',
+                'Directors': 'Directors',
+                'Clint Eastwood': 'Clint Eastwood',
+                'Renny Harlin': 'Renny Harlin',
+                'Walter Hill': 'Walter Hill',
+                'Ron Howard': 'Ron Howard',
+                'Spike Lee': 'Spike Lee',
+                'Barry Levinson': 'Barry Levinson',
+                'Garry Marshall': 'Garry Marshall',
+                'Rob Reiner': 'Rob Reiner',
+                'Joel Schumacher': 'Joel Schumacher',
+                'Martin Scorsese': 'Martin Scorsese',
+                'Ridley Scott': 'Ridley Scott',
+                'Tony Scott': 'Tony Scott',
+                'Steven Soderbergh': 'Steven Soderbergh',
+                'Steven Spielberg': 'Steven Spielberg',
+                'Oliver Stone': 'Oliver Stone',
+                'Robert Zemeckis': 'Robert Zemeckis',
+                'Other': 'Other'},
+            placeholder='Select the director'))
     ]),
     html.Br(),
     dbc.Row([
     dbc.Col(html.Label(children='Writer')),
     dbc.Col(dcc.Dropdown(id='writer',
             options = {
-                'Stephen King': 'Stephen King',
                 'Woody Allen': 'Woody Allen',
-                'John Hughes': 'John Hughes',
                 'Luc Besson': 'Luc Besson',
-                'Wes Craven': 'Wes Craven',
+                'Michael Crichton': 'Michael Crichton',
                 'Joel Coen': 'Joel Coen',
+                'Wes Craven': 'Wes Craven',
+                'Brian Helgeland': 'Brian Helgeland',
+                'John Hughes': 'John Hughes',
+                'Stephen King': 'Stephen King',
+                'Ehren Kruger': 'Ehren Kruger',
+                'David Mamet': 'David Mamet',
+                'Robert Rodriguez': 'Robert Rodriguez',
                 'William Shakespeare': 'William Shakespeare',
                 'M. Night Shyamalan': 'M. Night Shyamalan',
-                'Brian Helgeland': 'Brian Helgeland',
-                'Quentin Tarantino': 'Quentin Tarantino',
-                'Robert Rodriguez': 'Robert Rodriguez',
-                'David Mamet': 'David Mamet',
-                'John Carpenter': 'John Carpenter',
-                'Michael Crichton': 'Michael Crichton',
                 'Kevin Smith': 'Kevin Smith',
-                'Ehren Kruger': 'Ehren Kruger',
+                'Quentin Tarantino': 'Quentin Tarantino',
                 'Leigh Whannell': 'Leigh Whannell',
                 'Other': 'Other'},
             placeholder='Select the writer')),
@@ -149,16 +144,16 @@ layout = html.Div([
     dbc.Col(html.Label(children='Production Company')),
     dbc.Col(dcc.Dropdown(id='company',
             options = {
-                'Other':'Other',
-                'Universal Pictures':'Universal Pictures',
                 'Columbia Pictures':'Columbia Pictures',
-                'Warner Bros.':'Warner Bros.',
-                'Paramount Pictures':'Paramount Pictures',
-                'Twentieth Century Fox':'Twentieth Century Fox',
+                'Metro-Goldwyn-Mayer (MGM)':'Metro-Goldwyn-Mayer (MGM)',
                 'New Line Cinema':'New Line Cinema',
-                'Walt Disney Pictures':'Walt Disney Pictures',
+                'Paramount Pictures':'Paramount Pictures',
                 'Touchstone Pictures':'Touchstone Pictures',
-                'Metro-Goldwyn-Mayer (MGM)':'Metro-Goldwyn-Mayer (MGM)',},
+                'Twentieth Century Fox':'Twentieth Century Fox',
+                'Universal Pictures':'Universal Pictures',
+                'Walt Disney Pictures':'Walt Disney Pictures',
+                'Warner Bros.':'Warner Bros.',
+                'Other':'Other'},
             placeholder='Select the company')),
     ]), 
     html.Br(),
@@ -166,82 +161,123 @@ layout = html.Div([
     dbc.Col(html.Label(children='Lead Actor')),
     dbc.Col(dcc.Dropdown(id='actor',
             options = {
-                'Nicolas Cage': 'Nicolas Cage',
-                'Robert De Niro': 'Robert De Niro',
-                'Tom Hanks': 'Tom Hanks',
-                'Tom Cruise': 'Tom Cruise',
-                'Bruce Willis': 'Bruce Willis',
-                'Denzel Washington': 'Denzel Washington',
-                'Sylvester Stallone': 'Sylvester Stallone',
-                'Johnny Depp': 'Johnny Depp',
-                'Kevin Costner': 'Kevin Costner',
-                'Adam Sandler': 'Adam Sandler',
-                'Eddie Murphy': 'Eddie Murphy',
-                'Matthew McConaughey': 'Matthew McConaughey',
-                'Arnold Schwarzenegger': 'Arnold Schwarzenegger',
-                'Harrison Ford': 'Harrison Ford',
-                'Keanu Reeves': 'Keanu Reeves',
-                'John Travolta': 'John Travolta ',
-                'Dwayne Johnson': 'Dwayne Johnson',
-                'Matt Damon': 'Matt Damon',
-                'Mel Gibson': 'Mel Gibson',
-                'Robin Williams': 'Robin Williams',
-                'Ben Stiller': 'Ben Stiller',
-                'Mark Wahlberg': 'Mark Wahlberg',
-                'Will Smith': 'Will Smith',
-                'Brad Pitt': 'Brad Pitt',
-                'Meryl Streep': 'Meryl Streep',
-                'Jeff Bridges': 'Jeff Bridges',
-                'Clint Eastwood': 'Clint Eastwood',
-                'Richard Gere': 'Richard Gere',
-                'Jim Carrey': 'Jim Carrey',
                 'Ben Affleck': 'Ben Affleck',
+                'Christian Bale': 'Christian Bale',
+                'Jeff Bridges': 'Jeff Bridges',
+                'Sandra Bullock': 'Sandra Bullock',
+                'Nicolas Cage': 'Nicolas Cage',
+                'Jim Carrey': 'Jim Carrey',
+                'George Clooney': 'George Clooney',
+                'Kevin Costner': 'Kevin Costner',
+                'Tom Cruise': 'Tom Cruise',
+                'John Cusack': 'John Cusack',
+                'Matt Damon': 'Matt Damon',
+                'Robert De Niro': 'Robert De Niro',
+                'Johnny Depp': 'Johnny Depp',
+                'Leonardo DiCaprio': 'Leonardo DiCaprio',
+                'Clint Eastwood': 'Clint Eastwood',
+                'Will Ferrell': 'Will Ferrel',
+                'Harrison Ford': 'Harrison Ford',
+                'Richard Gere': 'Richard Gere',
+                'Mel Gibson': 'Mel Gibson',
+                'Tom Hanks': 'Tom Hanks',
+                'Dwayne Johnson': 'Dwayne Johnson',
+                'Steve Martin': 'Steve Martin',
+                'Matthew McConaughey': 'Matthew McConaughey',
+                'Eddie Murphy': 'Eddie Murphy',
                 'Liam Neeson ': 'Liam Neeson ',
                 'Al Pacino': 'Al Pacino',
-                'George Clooney': 'George Clooney',
-                'Christian Bale': 'Christian Bale',
-                'Sandra Bullock': 'Sandra Bullock',
-                'Leonardo DiCaprio': 'Leonardo DiCaprio',
-                'Robert Downey Jr.': 'Robert Downey Jr.',
-                'John Cusack': 'John Cusack',
-                'Steve Martin': 'Steve Martin',
-                'Will Ferrell': 'Will Ferrel',
+                'Brad Pitt': 'Brad Pitt',
+                'Keanu Reeves': 'Keanu Reeves',
+                'Adam Sandler': 'Adam Sandler',
+                'Arnold Schwarzenegger': 'Arnold Schwarzenegger',    
+                'Will Smith': 'Will Smith',    
+                'Sylvester Stallone': 'Sylvester Stallone',
+                'Ben Stiller': 'Ben Stiller',
+                'Meryl Streep': 'Meryl Streep',
+                'John Travolta': 'John Travolta ',
+                'Mark Wahlberg': 'Mark Wahlberg',
+                'Denzel Washington': 'Denzel Washington',
+                'Robin Williams': 'Robin Williams',
+                'Bruce Willis': 'Bruce Willis',
                 'Other': 'Other'},
             placeholder='Select the lead actor')),
     ]), 
-    html.Br(),                
+    html.Br(),  
+    html.Br(),              
     dbc.Row([
         dbc.Col(html.Label(children='Nominations Won by Lead Actor')),
-        dbc.Col(dcc.Slider(id='nominations', min=0, max=15, value=0)),
+        dbc.Col(dcc.Slider(id='nominations', min=0, max=25, value=0, step=1,
+                            marks={
+                                0: {'label': '0'},
+                                5: {'label': '5'},
+                                10: {'label': '10'},
+                                15: {'label': '15'},
+                                20: {'label': '20'},
+                                25: {'label': '25'},
+                            },
+                            tooltip={'placement': 'bottom', 'always_visible': True})),
     ]),
-        html.Br(),                
+    html.Br(),  
+    html.Br(),              
     dbc.Row([
         dbc.Col(html.Label(children='Awards Won by Lead Actor')),
-        dbc.Col(dcc.Slider(id='awards', min=0, max=15, value=0)),
+        dbc.Col(dcc.Slider(id='awards', min=0, max=5, value=0, step=1,
+                            tooltip={'placement': 'bottom', 'always_visible': True})),
     ]),
-    html.Br(),                
+    html.Br(),        
+    html.Br(),        
     dbc.Row([
         dbc.Col(html.Label(children='Age of Lead Actor')),
-        dbc.Col(dcc.Slider(id='age', min=0, max=100, value=0)),
+        dbc.Col(dcc.Slider(id='age', min=0, max=100, value=0, step=1,
+                            marks={
+                                0:{'label': '0'},
+                                25:{'label': '25'},
+                                50:{'label': '50'},
+                                75:{'label': '75'},
+                                100:{'label': '100'}
+                            },
+                            tooltip={'placement':'bottom', 'always_visible': True})),
     ]),
+    html.Br(),
     html.Br(),
     dbc.Row([
         dbc.Col(html.Label(children='Select the Budget Amount (USD$)')),
-        dbc.Col(dcc.Slider(id='budget', min=0, max=50000000, value=0)),
+        dbc.Col(dcc.Slider(id='budget', min=0, max=400000000, value=0, 
+                            step=1000000,
+                            marks={
+                                0:{'label': '0'},  
+                                100000000:{'label': '100M'},
+                                200000000:{'label': '200M'},
+                                300000000:{'label': '300M'},
+                                400000000:{'label': '400M'},
+                            
+                            },
+                            tooltip={'placement':'bottom', 'always_visible': True})),
     ]),
-    html.Br(),                
+    html.Br(), 
+    html.Br(),               
     dbc.Row([
         dbc.Col(html.Label(children='Runtime (Minutes)')),
-        dbc.Col(dcc.Slider(id='runtime', min=0, max=200, value=0)),
+        dbc.Col(dcc.Slider(id='runtime', min=0, max=300, value=0, step=1,
+                            marks={
+                                0:{'label': '0'},
+                                100:{'label': '100'},
+                                200:{'label': '200'},
+                                300:{'label': '300'}
+                            },
+                            tooltip={'placement':'bottom', 'always_visible': True})),
     ]),
+    html.Br(),
     html.Br(),
     dbc.Row([dbc.Button('Submit', id='submit-val', n_clicks=0, color='primary')
     ]),
     html.Br(),
-    dbc.Row([html.Div(id='prediction-output')])
-
+    html.Center(
+    html.Div([
+        html.H1(id='prediction-output', style={'color': 'black'})
+    ]))
     ])
-
 
 
 @callback(Output(component_id='prediction-output', component_property='children'),
@@ -259,29 +295,35 @@ layout = html.Div([
                 State(component_id='budget', component_property='value',),
                 State(component_id='runtime', component_property='value',),
                 Input(component_id='submit-val', component_property='n_clicks'),
-
                 )
 
-def update_result( rating, genre, release_month, release_dow, director,
+def update_result(rating, genre, release_month, release_dow, director,
                     writer, company, actor, nominations, awards, age, budget, runtime, n_clicks):
 
-    prediction = encode(rating, genre, release_month, release_dow, director, writer, company, actor, nominations, awards, age, budget, runtime)
+    
 
-    prediction = int(prediction)
-    
-    return f"The expected gross revenue is: ${prediction:,.2f}"
-    
-    
-    
-    
-    
-    
-    
-    
-    # return f"The expected gross revenue is: {prediction}"
 
-       # print(rating, genre, budget)
-    # # x = np.array([[float(rating), float(genre), float(budget)]])
-    # jlib_model = joblib.load('Ridge_model.joblib')
-    # jlib_model.predict(x)
-    
+    if n_clicks > 0:
+
+        if rating == None:
+            return "Input for 'Rating' is required."
+        elif genre == None:
+            return "Input for 'Genre' is required."
+        elif release_month == None:
+            return "Input for 'Month of Release' is required."
+        elif release_dow == None:
+            return "Input for 'Day of Week of Movie's Release' is required."
+        elif director == None:
+            return "Input for 'Director' is required."
+        elif writer == None:
+            return "Input for 'Writer' is required."
+        elif company == None:
+            return "Input for 'Production Company' is required."
+
+
+
+        prediction = encode(rating, genre, release_month, release_dow, director, writer, company, actor, nominations, awards, age, budget, runtime)
+            
+        prediction = int(prediction)
+
+        return f"The predicted gross revenue is: ${prediction:,.2f}"
