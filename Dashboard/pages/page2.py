@@ -10,7 +10,10 @@ from encode import encode
 
 
 markdown_text = '''
-Enter the required information for the upcoming release or movie project. The machine learning model will predict its expected gross revenue.
+
+Enter the required information for the upcoming film release or movie project. The machine learning model will predict its expected gross revenue.
+
+All fields are required in order to make the best prediction. 
 
 
 '''
@@ -45,8 +48,8 @@ layout = html.Div([
                     'Comedy': 'Comedy',
                     'Crime': 'Crime',
                     'Drama': 'Drama',
-                    'Horror': 'Horror',
-                    'Other': 'Other'},
+                    'Other': 'Other'
+                    },
                 placeholder='Select the genre'))
     ]),
     html.Br(),
@@ -294,14 +297,33 @@ layout = html.Div([
                 Input(component_id='submit-val', component_property='n_clicks'),
                 )
 
-def update_result( rating, genre, release_month, release_dow, director,
+def update_result(rating, genre, release_month, release_dow, director,
                     writer, company, actor, nominations, awards, age, budget, runtime, n_clicks):
 
+    
+
+
     if n_clicks > 0:
+
+        if rating == None:
+            return "Input for 'Rating' is required."
+        elif genre == None:
+            return "Input for 'Genre' is required."
+        elif release_month == None:
+            return "Input for 'Month of Release' is required."
+        elif release_dow == None:
+            return "Input for 'Day of Week of Movie's Release' is required."
+        elif director == None:
+            return "Input for 'Director' is required."
+        elif writer == None:
+            return "Input for 'Writer' is required."
+        elif company == None:
+            return "Input for 'Production Company' is required."
+
+
 
         prediction = encode(rating, genre, release_month, release_dow, director, writer, company, actor, nominations, awards, age, budget, runtime)
             
         prediction = int(prediction)
-    
+
         return f"The predicted gross revenue is: ${prediction:,.2f}"
-    
