@@ -12,7 +12,7 @@ Over one billion movie tickets are sold worldwide annually resulting in box offi
 
 Big-budget films with recognizable stars sometimes underperform at the box office. Star-studded comedy such as "How Do You Know" 
 with Reese Witherspoon, Paul Rudd, and Jack Nicholson earned $49.6 million despite a budget of $120 million. 
-Possibly even more suprising, "Slumdog Millionaire" achieved unphathomable success. Its director, Danny Boyle, was respected
+Possibly even more suprising, "Slumdog Millionaire" achieved unfathomable success. It's director, Danny Boyle, was respected
 but had not yet earned his blockbuster director moment. It had a cast of mostly unknown actors. Yet, Fox Searchlight invested 
 $15 million into the film with hopes it would gain critic attention and circulate positively in award festivals. The film would
 go onto earn $141 million domestic. If these film examples tell us anything, it's that there doesn't seem to be a formula to 
