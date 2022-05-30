@@ -8,6 +8,9 @@ We chose this topic for a few different reasons. The first reason was that there
 
 ## View an In-Depth Presentation of our Project on Google Slides [Here](https://docs.google.com/presentation/d/19gyoO1Xixo4S4uNQXGSk6etrtWgv2QRmYCXpXCZC0VE/edit#slide=id.p)
 
+
+## View a demo of our Dashboard [Here](https://drive.google.com/file/d/1pef2VDipcpTnSwwBJgdTziZaoPFYamyA/view?usp=sharing)
+
 # Project Outline
 
 ## Source of data
