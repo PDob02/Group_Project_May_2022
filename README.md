@@ -49,6 +49,8 @@ After analyzing our data, we determined that the best features to include in our
 Data was split into training and testing data using SciKit Learn’s train_test_split() function, where the features of the model were input as the X value and the square root of the target value (adjusted gross revenue) was input as the y value. We used the square root of target value to account for the data’s strong positive skew. After the data was split, both the training and testing feature values were scaled using SciKit Learn’s RobustScaler() to account for outliers noticed during data exploration.
 We chose to use a linear regression model because the target value we are trying to predict is a continuous value. The limitations of the linear regression are that it is limited to linear relationships, only looks at the mean of the dependent variable, is sensitive to outliers, and data must be independent. This mean heavy way of looking at things can easily be skewed. (Source #2)
 
+Our model produced an r2 score of 0.58 and a mean squared error of approximately 22 million. The r2 score is commonly used to describe the accuracy of a linear regression model, and it shows how well a linear model fits a set of data. In this case, our model shows 58% of the total variance in the dependent variable was predictable from the independent variables. The mean squared error describes how close, on average, our regression line is to the original target variables. While an error of 22 million may seem alarming, the gross income variable that is being measured is commonly in the hundred-million range.
+
 
 ## Dashboard
 
